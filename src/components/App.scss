@@ -1,0 +1,22 @@
+.content {
+  display: flex;
+  padding: 50px 50px;
+}
+
+.content-inner {
+  flex: auto;
+  padding: 24px;
+  background-color: #ffffff;
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+.menu {
+  line-height: 64px;
+}
+
+.footer {
+  text-align: center;
+}

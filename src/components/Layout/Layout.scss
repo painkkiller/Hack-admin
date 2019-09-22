@@ -1,0 +1,20 @@
+.wrapper {
+  display: grid;
+  grid-template-areas: 'header header header' '. content .' 'footer footer footer';
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-columns: 60px 1fr 60px;
+}
+
+.header {
+  grid-area: header;
+}
+.content {
+  border: 1px solid silver;
+  grid-area: content;
+  align-items: start;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+}
