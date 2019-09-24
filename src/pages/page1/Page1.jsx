@@ -4,8 +4,9 @@ import { Row, Col } from 'antd';
 
 import delay from 'utils/delay';
 
-// import s from './HomePage.scss';
 import Loader from 'components/ui/Loader';
+
+import s from './Page1.scss';
 
 export default class HomePage extends Component {
   state = {
@@ -31,10 +32,10 @@ export default class HomePage extends Component {
         {this.state.isLoading ? (
           <Loader size="large"/>
         ) : (
-          <>
+          <div className={s.container}>
             <h1>Page1</h1>
             <div></div>
-          </>
+          </div>
         )}
       </>
     );

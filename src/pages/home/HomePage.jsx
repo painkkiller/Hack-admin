@@ -6,6 +6,8 @@ import delay from 'utils/delay';
 
 import Loader from 'components/ui/Loader';
 
+import s from './HomePage.scss';
+
 export default class HomePage extends Component {
   state = {
     isLoading: true,
@@ -30,10 +32,10 @@ export default class HomePage extends Component {
         {this.state.isLoading ? (
           <Loader size="large"/>
         ) : (
-          <>
+          <div className={s.container}>
             <h1>Home page</h1>
             <div></div>
-          </>
+          </div>
         )}
       </>
     );
