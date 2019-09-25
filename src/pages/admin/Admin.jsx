@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'antd';
 import { Layout, Breadcrumb, Menu, Mention, Icon } from 'antd';
-const { Header, Footer, Sider, Content } = Layout;
+
 import { Route, withRouter, Switch, Link } from 'react-router-dom';
 
 import delay from 'utils/delay';
+import User from 'utils/user';
 
 import HomePage from 'pages/home';
 import Page1 from 'pages/page1';
@@ -12,14 +13,18 @@ import Page2 from 'pages/page2';
 
 import s from './Admin.scss';
 import Loader from 'components/ui/Loader';
+import UserSnippet from 'components/UserSnippet';
 
 import Logo from 'assets/logo.svg';
+
+const { Header, Footer, Sider, Content } = Layout;
 
 class Admin extends Component {
 
   state = {
     isLoading: true,
     collapsed: false,
+    /* user: User.getUser(), */
     data: []
   };
 
@@ -84,6 +89,7 @@ class Admin extends Component {
                     onClick={this.toggle}
                   />
                 </div>
+                <UserSnippet userName="Guest" additional="Admin" />
               </Header>
               <Content>
                 <Route exact path={`${match.path}`} component={HomePage} />
